@@ -1,6 +1,8 @@
-# AdvisorFit 0.2.4
+# AdvisorFit 0.2.5
 
 让通用助手更有条理地找导师、分析研究匹配，并准备真实的进组邮件。目标是减少用户反复写长提示的负担，让来源、未知信息和申请目的处理更可靠；目前没有足够证据证明它普遍优于普通助手。完整、清楚的提示也可以让普通助手表现很好。
+
+**先看真实案例：** [无Skill / AdvisorFit 0.2.4完整回答对照](docs/cases/case-002/README.md) · [0.2.5具体改动与待复测项](docs/0.2.5-revision-plan.md)
 
 ## 三个使用场景
 
@@ -12,7 +14,7 @@
 
 ## 安装：完整插件或直接 Skill
 
-在仓库根运行 `python scripts/package_skill.py`，生成 `outputs/advisorfit-skill-0.2.4.zip` 和同名 `.sha256`。运行 `python scripts/check_release.py` 检查版本、文件与演示说明是否同步。
+在仓库根运行 `python scripts/package_skill.py`，生成 `outputs/advisorfit-skill-0.2.5.zip` 和同名 `.sha256`。运行 `python scripts/check_release.py` 检查版本、文件与演示说明是否同步。
 
 **完整插件**：在支持本地插件目录或插件ZIP的宿主中选择本仓库目录或生成的ZIP，按宿主实际安装入口完成。包内有根 `plugin.json`、`.codex-plugin/plugin.json` 和完整 `skills/advisorfit/`。宿主支持情况以实际界面为准；ZIP生成不等于安装成功。开新聊天，检查能否读取核心与所需参考文件。
 
@@ -36,7 +38,7 @@
 
 ## 证据与参考
 
-[公开证据摘要](docs/evidence.md)区分旧版测试、用户报告和未验证项。0.2.4结构检查不证明模型稳定遵守；18次未来模型测试尚未运行，见[评测说明](evals/README.md)。
+[公开证据摘要](docs/evidence.md)区分旧版测试、用户报告和未验证项。0.2.5结构检查不证明模型稳定遵守；18次未来模型测试尚未运行，见[评测说明](evals/README.md)。
 
 [更新记录](CHANGELOG.md) · [安装与打包](docs/installation.md) · [推广草稿](docs/promotion.md) · [MIT许可](LICENSE)
 
@@ -46,3 +48,9 @@
 
 [当前产品边界](docs/product-scope.md) · [空白账号对比与虚构简历](evals/manual-blank-account/README.md)
 
+
+## 真实案例：完整回答对照
+
+[打开P.l案例：无Skill vs AdvisorFit 0.2.4](docs/cases/case-002/README.md)
+
+先看“准备范围、经历连接、结论表达”的原句对照，再展开两份完整主回答。观察到局部改善，也保留两组共有的未知经历误判和来源/起步问题。0.2.5据此修订，尚待下一轮真实网页验证；不把单次探索宣传成显著或普遍优势。

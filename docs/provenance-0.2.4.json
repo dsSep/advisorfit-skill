@@ -1,0 +1,18 @@
+{
+  "source_version": "0.2.4",
+  "source_commit": "fa062d9cc69235ae7a673010610b179ae9c2a44e",
+  "sha256": {
+    "plugin.json": "411266ee5c0027470f8336a791ad718619eaaf878561e75f1cd2153f0c5a2557",
+    ".codex-plugin/plugin.json": "ecdf821d890ad9d00e08cdb256799b70df7d2979fb9beb3ab57b4072467c9dd6",
+    "scripts/package_skill.py": "cf693a399115f10dfc1e8fdc62977632287e6cb7eb7cc6d83faaf4e6fd7ab5c7",
+    "skills/advisorfit/SKILL.md": "1d2d12a4d61c5388b09f33b698f03fd6e98f26c587d24a31e83b9f29065f7a67",
+    "skills/advisorfit/references/research.md": "6cad29c1103300cba5ff51e78e58cd78d4586a2defb6f7438b57d7d6ca16bffa",
+    "skills/advisorfit/references/preparation.md": "c3fb177174029c44f4b21465136ff3cfa68ad12b1c863f0a2619f185caae0077",
+    "skills/advisorfit/references/outreach.md": "054e61bb385d63eb229e93c16a33527582705c96d742b045d1585e44c32f6066",
+    "skills/advisorfit/references/mcp-contract.md": "25cfb4ad34e6bdda7f01af46862c94a7e232ebbfbd466974104b7e2c303263e4",
+    "skills/advisorfit/references/retrieval-evaluation.md": "f91655b8c55cac4c856fa6f712a8b7fc44503dd6c2d4e2c7ae1351214e1c2f50",
+    "skills/advisorfit/scripts/check_links.py": "e40ee1563e545b4b75ae6701d7c9dec795340d0de9131131dda716797f24a760",
+    "skills/advisorfit/evals/cases.json": "4beefcd6035b54a8f75e0a462cca359aa5a53e13fb34c973e6dc98950224232e"
+  },
+  "note": "Snapshot before 0.2.5 edits; original case answers remain 0.2.4 records."
+}

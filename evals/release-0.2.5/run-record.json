@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-05",
+  "method": "Three fresh-context Codex subagents, one closed fictional task each; not a web experiment or blind comparative evaluation",
+  "actual_model_and_reasoning": "inherited host settings; not independently verified",
+  "actual_reads": {
+    "facts": [
+      "core",
+      "research",
+      "outreach"
+    ],
+    "papers": [
+      "core",
+      "research"
+    ],
+    "project": [
+      "core",
+      "preparation"
+    ]
+  },
+  "observed_outcome": "All three targeted checks satisfied in these outputs; residual style and missing-input limitations in README",
+  "repeat_count": 1,
+  "timing": "Start/end times not separately captured; no elapsed-time claim",
+  "shared_invocation": "Read the actual core and task-relevant original references, then the assigned task. Use only supplied fictional materials; no browsing or other test/version documents. Save full response unchanged; no self-scoring or other edits.",
+  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+}

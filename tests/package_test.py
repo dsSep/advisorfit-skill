@@ -49,7 +49,8 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(data['source_version'], '0.2.3')
         self.assertEqual(len(data['sha256']), 10)
         self.assertTrue(all(len(value) == 64 for value in data['sha256'].values()))
-        changed = {'plugin.json', '.codex-plugin/plugin.json', 'skills/advisorfit/references/research.md'}
+        changed = {'plugin.json', '.codex-plugin/plugin.json', 'skills/advisorfit/SKILL.md',
+                   'skills/advisorfit/references/research.md', 'skills/advisorfit/references/preparation.md'}
         for name, digest in data['sha256'].items():
             actual = hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
             if name in changed:
@@ -59,6 +60,18 @@ class PackageTests(unittest.TestCase):
         research = (ROOT / 'skills/advisorfit/references/research.md').read_text('utf-8')
         self.assertNotIn('按3–5条有依据', research)
         self.assertNotIn('以截至日向前近三年为研究窗口，近五年为背景窗口', research)
+
+    def test_025_changes_preserve_unrelated_skill_resources(self):
+        data = json.loads((ROOT / 'docs/provenance-0.2.4.json').read_text('utf-8'))
+        changed = {'plugin.json', '.codex-plugin/plugin.json', 'scripts/package_skill.py',
+                   'skills/advisorfit/SKILL.md', 'skills/advisorfit/references/research.md',
+                   'skills/advisorfit/references/preparation.md'}
+        for name, digest in data['sha256'].items():
+            actual = hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
+            if name in changed:
+                self.assertNotEqual(actual, digest, name)
+            else:
+                self.assertEqual(actual, digest, name)
 
     def test_freshness_comparison_detects_a_changed_reference(self):
         pack = module('pack', ROOT / 'scripts/package_skill.py')
