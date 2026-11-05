@@ -5,6 +5,7 @@ import { ArrowDownToLine, ArrowRight, Check, ChevronDown, FileText, CodeXml, Lay
 import { z } from "zod";
 import Link from "next/link";
 import { CASES } from "../../lib/cases";
+import { Report } from "./report";
 
 const statusSchema = z.object({ authenticated: z.boolean(), configured: z.boolean(), remaining: z.number().nonnegative(), globalRemaining: z.number().nonnegative(), version: z.string(), model: z.string(), busy: z.boolean().optional() });
 type Status = z.infer<typeof statusSchema>;
@@ -16,16 +17,6 @@ async function readStatus(): Promise<Status> {
 }
 type StreamEvent = { type: "meta" | "delta" | "done" | "error"; text?: string; message?: string; code?: string; version?: string; model?: string; references?: string[]; remaining?: number; globalRemaining?: number; finishReason?: string; usage?: { total_tokens?: number } | null };
 const icons = [Search, UserRound, Layers3];
-
-function Report({ text }: { text: string }) {
-  // React escapes every fragment; model output is never inserted as HTML.
-  return <div className="report-copy">{text.split("\n").map((line, i) => {
-    const heading = /^(#{1,4})\s+(.+)$/.exec(line);
-    if (heading) return <h3 key={i}>{heading[2].replace(/\*\*/g, "")}</h3>;
-    if (!line.trim()) return <div className="paragraph-break" key={i} />;
-    return <p key={i}>{line.split(/(\*\*[^*]+\*\*)/g).map((part, j) => part.startsWith("**") && part.endsWith("**") ? <strong key={j}>{part.slice(2, -2)}</strong> : part)}</p>;
-  })}</div>;
-}
 
 export function Demo({ authenticated, signInPath }: { authenticated: boolean; signInPath: string }) {
   const [selected, setSelected] = useState(0);
@@ -140,4 +131,5 @@ export function Demo({ authenticated, signInPath }: { authenticated: boolean; si
     </main><footer className="site-footer"><a className="footer-brand" href="https://github.com/tianxiangliu-ds/advisorfit-skill" target="_blank" rel="noreferrer">AdvisorFit <ArrowRight size={14} aria-hidden="true" /></a><span>择师有据，行动有路。</span><span>一个关于更好提问的开源实验。</span></footer>
   </>;
 }
+
 

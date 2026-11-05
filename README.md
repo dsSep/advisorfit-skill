@@ -43,3 +43,6 @@
 设计参考：[Anthropic Skills](https://github.com/anthropics/skills)、[Superpowers](https://github.com/obra/superpowers)、[Agent Skills规范](https://agentskills.io/specification)。这些是参考，不代表认证或背书。发布含 AI 生成内容时参考 [B站官方公告](https://www.bilibili.com/opus/1202507670848798745)。
 
 
+
+[当前产品边界](docs/product-scope.md) · [空白账号对比与虚构简历](evals/manual-blank-account/README.md)
+
