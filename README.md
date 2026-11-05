@@ -2,7 +2,7 @@
 
 让通用助手更有条理地找导师、分析研究匹配，并准备真实的进组邮件。目标是减少用户反复写长提示的负担，让来源、未知信息和申请目的处理更可靠；目前没有足够证据证明它普遍优于普通助手。完整、清楚的提示也可以让普通助手表现很好。
 
-**先看真实案例：** [无Skill / AdvisorFit 0.2.4完整回答对照](docs/cases/case-002/README.md) · [0.2.5具体改动与待复测项](docs/0.2.5-revision-plan.md)
+**先看真实案例：** [小红／N.l：0.2.5完整对照与限制](docs/cases/case-001/README.md) · [无Skill / AdvisorFit 0.2.4完整回答对照](docs/cases/case-002/README.md) · [0.2.5具体改动与待复测项](docs/0.2.5-revision-plan.md)
 
 ## 三个使用场景
 
