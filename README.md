@@ -30,7 +30,7 @@
 
 ## Sites在线演示
 
-仓库同时含独立演示源码。[演示说明](docs/demo.md)解释如何实际加载核心与五份参考，使用 DeepSeek V4.1 Flash 处理固定虚构案例。公开可读、登录后运行；每日每用户5次、全站100次。不实时联网，也不是ChatGPT原生插件。实际可用地址以真实发布信息为准，这里不放占位网址。
+仓库同时含独立演示源码。[演示说明](docs/demo.md)解释如何实际加载核心与五份参考，使用 DeepSeek V4.1 Flash 处理固定虚构案例。登录后运行；每日每用户5次、全站100次。不实时联网，也不是ChatGPT原生插件。[打开在线体验](https://advisorfit-demo.l978542784.chatgpt.site)。已确认登录后可生成并扣减额度；平台配置为公开，但当前匿名请求仍收到登录页，免登录浏览尚未验收通过。
 
 密钥 `DEEPSEEK_API_KEY` 只放在服务端环境，不提交密钥、真实简历或私人记录。登录、配额与模型服务须在发布环境验证，本地打包通过不代表线上已验证。
 
@@ -41,4 +41,5 @@
 [更新记录](CHANGELOG.md) · [安装与打包](docs/installation.md) · [推广草稿](docs/promotion.md) · [MIT许可](LICENSE)
 
 设计参考：[Anthropic Skills](https://github.com/anthropics/skills)、[Superpowers](https://github.com/obra/superpowers)、[Agent Skills规范](https://agentskills.io/specification)。这些是参考，不代表认证或背书。发布含 AI 生成内容时参考 [B站官方公告](https://www.bilibili.com/opus/1202507670848798745)。
+
 
