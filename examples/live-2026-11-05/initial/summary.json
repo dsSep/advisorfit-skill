@@ -1,0 +1,112 @@
+[
+  {
+    "caseId": "discover",
+    "startedAt": "2026-11-05T07:25:47.835Z",
+    "elapsedMs": 22237,
+    "status": 200,
+    "meta": {
+      "type": "meta",
+      "version": "0.2.4",
+      "model": "deepseek-flash",
+      "references": [
+        "SKILL.md",
+        "references/research.md"
+      ]
+    },
+    "done": {
+      "type": "done",
+      "usage": {
+        "prompt_tokens": 3911,
+        "completion_tokens": 2985,
+        "total_tokens": 6896,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1756
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 3911
+      },
+      "finishReason": "stop",
+      "remaining": 4,
+      "globalRemaining": 99
+    },
+    "hasText": true,
+    "scope": "Local real-provider functional check using production handlers and in-memory SQLite; not hosted identity/D1 verification or comparative evaluation."
+  },
+  {
+    "caseId": "analyze",
+    "startedAt": "2026-11-05T07:26:10.072Z",
+    "elapsedMs": 26221,
+    "status": 200,
+    "meta": {
+      "type": "meta",
+      "version": "0.2.4",
+      "model": "deepseek-flash",
+      "references": [
+        "SKILL.md",
+        "references/research.md",
+        "references/preparation.md",
+        "references/outreach.md"
+      ]
+    },
+    "done": {
+      "type": "done",
+      "usage": {
+        "prompt_tokens": 5888,
+        "completion_tokens": 3711,
+        "total_tokens": 9599,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1827
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 2816
+      },
+      "finishReason": "stop",
+      "remaining": 3,
+      "globalRemaining": 98
+    },
+    "hasText": true,
+    "scope": "Local real-provider functional check using production handlers and in-memory SQLite; not hosted identity/D1 verification or comparative evaluation."
+  },
+  {
+    "caseId": "compare",
+    "startedAt": "2026-11-05T07:26:36.294Z",
+    "elapsedMs": 33072,
+    "status": 200,
+    "meta": {
+      "type": "meta",
+      "version": "0.2.4",
+      "model": "deepseek-flash",
+      "references": [
+        "SKILL.md",
+        "references/research.md"
+      ]
+    },
+    "done": {
+      "type": "done",
+      "usage": {
+        "prompt_tokens": 3925,
+        "completion_tokens": 4096,
+        "total_tokens": 8021,
+        "prompt_tokens_details": {
+          "cached_tokens": 3072
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3165
+        },
+        "prompt_cache_hit_tokens": 3072,
+        "prompt_cache_miss_tokens": 853
+      },
+      "finishReason": "length",
+      "remaining": 2,
+      "globalRemaining": 97
+    },
+    "hasText": true,
+    "scope": "Local real-provider functional check using production handlers and in-memory SQLite; not hosted identity/D1 verification or comparative evaluation."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "interface": {
+    "displayName": "AdvisorFit",
+    "shortDescription": "导师研究与升学套磁支持",
+    "longDescription": "按来源研究导师，比较申请者与研究方向的交集，提供可执行的入门计划，并根据已确认的申请阶段撰写完整套磁邮件。",
+    "developerName": "AdvisorFit",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "结合我的简历分析指定导师，并说明研究匹配依据。",
+      "先给我一份带论文链接的一周入门方案预览。",
+      "根据我的申请阶段，准备一封完整的个性化套磁邮件。"
+    ]
+  },
+  "name": "advisorfit",
+  "version": "0.2.4",
+  "description": "导师深度研究、入门学习指导与个性化套磁；宿主搜索，来源可核查。",
+  "author": {
+    "name": "AdvisorFit"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}
