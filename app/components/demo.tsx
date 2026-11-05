@@ -14,7 +14,7 @@ async function readStatus(): Promise<Status> {
   if (!response.ok) throw new Error("status_unavailable");
   return statusSchema.parse(await response.json());
 }
-type StreamEvent = { type: "meta" | "delta" | "done" | "error"; text?: string; message?: string; code?: string; version?: string; model?: string; references?: string[]; remaining?: number; globalRemaining?: number; finishReason?: string };
+type StreamEvent = { type: "meta" | "delta" | "done" | "error"; text?: string; message?: string; code?: string; version?: string; model?: string; references?: string[]; remaining?: number; globalRemaining?: number; finishReason?: string; usage?: { total_tokens?: number } | null };
 const icons = [Search, UserRound, Layers3];
 
 function Report({ text }: { text: string }) {
@@ -35,6 +35,7 @@ export function Demo({ authenticated, signInPath }: { authenticated: boolean; si
   const [statusError, setStatusError] = useState(false);
   const [phase, setPhase] = useState<"idle" | "connecting" | "generating" | "done" | "error">("idle");
   const [result, setResult] = useState("");
+  const [usage, setUsage] = useState<number | null>(null);
   const [error, setError] = useState("");
   const [meta, setMeta] = useState<{ version?: string; model?: string; references?: string[] }>({});
   const running = useRef(false);
@@ -60,7 +61,7 @@ export function Demo({ authenticated, signInPath }: { authenticated: boolean; si
   async function generate() {
     if (running.current || !consent || !question.trim() || !signedIn || !status?.configured || statusError || status.busy || exhausted) return;
     running.current = true;
-    setPhase("connecting"); setResult(""); setError(""); setMeta({});
+    setPhase("connecting"); setUsage(null); setResult(""); setError(""); setMeta({});
     let finished = false;
     let receivedText = false;
     try {
@@ -85,6 +86,7 @@ export function Demo({ authenticated, signInPath }: { authenticated: boolean; si
         if (event.type === "done") {
           if (!receivedText) throw new Error("模型没有返回回答正文，本次生成未完成。");
           finished = true;
+          setUsage(typeof event.usage?.total_tokens === 'number' ? event.usage.total_tokens : null);
           setPhase("done");
           if (event.finishReason === "length") setError("本次回答达到长度上限，内容可能不完整。");
           setStatus(previous => previous ? { ...previous, remaining: event.remaining ?? previous.remaining, globalRemaining: event.globalRemaining ?? previous.globalRemaining, busy: false } : null);
@@ -131,10 +133,11 @@ export function Demo({ authenticated, signInPath }: { authenticated: boolean; si
           <div className="result-toolbar"><span className="report-label"><span className={`status-dot ${busy ? "active" : ""}`} />{phase === "done" ? error ? "回答已返回，内容可能不完整" : "回答已生成" : phase === "connecting" ? "正在连接服务" : phase === "generating" ? "正在生成回答" : phase === "error" ? "本次生成未完成" : "等待你的第一个问题"}</span><div className="result-actions"><button type="button" aria-label="重置提问与结果" title="重置提问与结果" disabled={busy} onClick={reset}><RotateCcw size={16} aria-hidden="true" /></button><button type="button" aria-label="下载 Markdown 回答" title="下载 Markdown 回答" disabled={!result || busy} onClick={download}><ArrowDownToLine size={17} aria-hidden="true" /></button></div></div>
           {error && <div className="error-message" role="alert">{error}</div>}
           {result ? <div className="report-content"><div className="report-eyebrow">ADVISORFIT / {active.id.toUpperCase()}</div><Report text={result} />{busy && <span className="writing-mark" aria-hidden="true" />}</div> : <div className="empty-result"><div className="empty-illustration" aria-hidden="true"><div className="paper-sheet"><span /><span /><span /><span /><i><Check size={18} /></i></div><span className="illustration-index">AF / 01</span></div><p className="empty-eyebrow">A LITTLE CLARITY, A NEXT STEP.</p><h3>{busy ? "你的问题，正在被认真整理。" : "好判断，从看清材料开始。"}</h3><p>{busy ? "正在等待模型返回内容。回答会在这里逐步出现，请保持页面打开。" : "选一个场景，读一读背景，再试着提问。这里会出现基于这些材料生成的分析。"}</p><div className="output-promises"><span><Check size={14} aria-hidden="true" />解释判断依据</span><span><Check size={14} aria-hidden="true" />保留未知信息</span><span><Check size={14} aria-hidden="true" />给出具体行动</span></div></div>}
-          <div className="report-footer"><span>Skill {meta.version || "0.2.4"}</span><span>{meta.model || status?.model || "由DeepSeek 生成"}</span></div>
+          {phase === "done" && <p className="field-help" style={{ padding: "0 24px" }}>{usage === null ? "模型未返回用量，本次无法统计 token。" : `本次用量：${usage} token（模型计数，不等于金额）`}</p>}<div className="report-footer"><span>Skill {meta.version || "0.2.4"}</span><span>{meta.model || status?.model || "由DeepSeek 生成"}</span></div>
         </section><div className="method-note"><span className="method-line" /><p><strong>有依据，也有边界。</strong><br />研究匹配不等于正在招生；建议的项目不等于已经完成的经历。演示回答仍可能出错，请回到材料核对。</p></div>{meta.references && <details className="skill-details"><summary>查看本次加载的 Skill 参考文件</summary><ul>{meta.references.map(item => <li key={item}><code>{item}</code></li>)}</ul></details>}<div className="sr-only" role="status" aria-live="polite">{phase === "connecting" ? "正在连接模型" : phase === "generating" ? "正在生成回答" : phase === "done" ? error ? "回答可能不完整，请检查提示" : "回答已生成" : phase === "error" ? "本次生成未完成，请检查错误提示" : ""}</div></div>
       </section>
       <section className="how-it-works" aria-label="演示工作方式"><div><p className="eyebrow">SMALL DEMO. CLEAR BOUNDARIES.</p><h2>体验方法，而非虚构确定性。</h2></div><ol><li><span>01</span><p><strong>固定材料</strong>背景与虚构研究摘要公开可读。</p></li><li><span>02</span><p><strong>真实生成</strong>模型依据 Skill 0.2.4 现场回答。</p></li><li><span>03</span><p><strong>自己判断</strong>核对依据，把建议变成可执行的小步。</p></li></ol></section>
     </main><footer className="site-footer"><a className="footer-brand" href="https://github.com/tianxiangliu-ds/advisorfit-skill" target="_blank" rel="noreferrer">AdvisorFit <ArrowRight size={14} aria-hidden="true" /></a><span>择师有据，行动有路。</span><span>一个关于更好提问的开源实验。</span></footer>
   </>;
 }
+
