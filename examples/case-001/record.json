@@ -1,0 +1,185 @@
+{
+  "case": "case-n-shortprompt-025-01",
+  "retrieved_at_utc": "2026-11-05T13:02:01.536279+00:00",
+  "review_method": "知情定性初审；不是盲评，不设总分或显著性检验",
+  "tested_skill_version": "0.2.5，用户确认；未恢复实际加载文件或工具轨迹",
+  "user_confirmed": {
+    "same_prompt_and_resume": true,
+    "same_default_model_and_thinking_strength": true,
+    "account": "无订阅普通账号",
+    "model_label": "GPT-6"
+  },
+  "page_metadata": {
+    "without-skill": {
+      "settings": [
+        {
+          "node": 111,
+          "model_slug": "gpt-6",
+          "default_model_slug": "auto"
+        }
+      ],
+      "statuses": [
+        {
+          "node": 95,
+          "status": "finished_successfully"
+        },
+        {
+          "node": 609,
+          "status": "resolved"
+        },
+        {
+          "node": 610,
+          "status": "resolved"
+        },
+        {
+          "node": 611,
+          "status": "resolved"
+        },
+        {
+          "node": 612,
+          "status": "resolved"
+        },
+        {
+          "node": 613,
+          "status": "resolved"
+        },
+        {
+          "node": 614,
+          "status": "resolved"
+        },
+        {
+          "node": 615,
+          "status": "resolved"
+        },
+        {
+          "node": 616,
+          "status": "resolved"
+        },
+        {
+          "node": 617,
+          "status": "resolved"
+        },
+        {
+          "node": 618,
+          "status": "resolved"
+        },
+        {
+          "node": 619,
+          "status": "resolved"
+        },
+        {
+          "node": 620,
+          "status": "resolved"
+        },
+        {
+          "node": 621,
+          "status": "resolved"
+        },
+        {
+          "node": 622,
+          "status": "resolved"
+        },
+        {
+          "node": 623,
+          "status": "resolved"
+        },
+        {
+          "node": 624,
+          "status": "resolved"
+        },
+        {
+          "node": 625,
+          "status": "resolved"
+        }
+      ],
+      "plain_node": 595,
+      "markup_node": 1594,
+      "characters": 7797
+    },
+    "with-skill": {
+      "settings": [
+        {
+          "node": 111,
+          "model_slug": "gpt-6-t-mini",
+          "default_model_slug": "auto"
+        }
+      ],
+      "statuses": [
+        {
+          "node": 95,
+          "status": "finished_successfully"
+        },
+        {
+          "node": 645,
+          "status": "resolved"
+        },
+        {
+          "node": 646,
+          "status": "resolved"
+        },
+        {
+          "node": 647,
+          "status": "resolved"
+        },
+        {
+          "node": 648,
+          "status": "resolved"
+        },
+        {
+          "node": 649,
+          "status": "resolved"
+        },
+        {
+          "node": 650,
+          "status": "resolved"
+        },
+        {
+          "node": 651,
+          "status": "resolved"
+        },
+        {
+          "node": 652,
+          "status": "resolved"
+        },
+        {
+          "node": 653,
+          "status": "resolved"
+        },
+        {
+          "node": 654,
+          "status": "resolved"
+        },
+        {
+          "node": 655,
+          "status": "resolved"
+        },
+        {
+          "node": 656,
+          "status": "resolved"
+        },
+        {
+          "node": 657,
+          "status": "resolved"
+        },
+        {
+          "node": 658,
+          "status": "resolved"
+        }
+      ],
+      "plain_node": 631,
+      "markup_node": 1647,
+      "characters": 7957
+    }
+  },
+  "model_control_conclusion": "两份分享页的model_slug不同：gpt-6 / gpt-6-t-mini。default_model_slug均auto。不能确认实际模型相同；不推断内部标识的能力等级或思考强度。",
+  "completeness": {
+    "both_received_main_answers": "完整文本及平台排版文本已保存",
+    "tested_prompt_and_attachment": "仅本轮用户提供并确认相同；未从原聊天独立恢复",
+    "followups": "未采集，不宣称验证辅导或邮件闭环",
+    "tool_calls_and_skill_loading": "未恢复；引用目录不能替代工具输入输出或加载证据",
+    "images_and_interactions": "保留组件标记，未重现图片或交互"
+  },
+  "transformations": "原始文本不改。可读副本仅按同页引用映射转链接、实体组件转名称、图片转带原查询的占位说明；每项转换单独保存。未恢复的目标不猜写。",
+  "privacy": "不公开分享链接、账户信息、原始HTML；仅公开已授权虚构材料、回答、来源目录及最小模型字段。",
+  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+}

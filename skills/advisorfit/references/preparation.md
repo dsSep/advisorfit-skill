@@ -11,7 +11,6 @@
 
 用户要求展开或选定期限后，先重复一句“我们要做出的产物是什么”，再按项目阶段安排时间。第一步写用户现在能点击/粘贴/修改什么、AI接下来会帮什么、用户怎样检查；附可直接发送的请求和一个输入→预期产物教学例子，避免泛泛“学概念、读论文、做实验”。陌生词随操作解释，一次只引入当前动作需要的概念。每天/每阶段给验收、卡住时的简化动作和真实资源位置。默认复用当前聊天、已有资料和工具，不要求额外API密钥、付费模型、数据集下载或安装框架。用户提交产物后先反馈，再进入下一步；全部结果可能不改善，必须如实记录。教学例子不是导师成果，也不证明新方法有效。
 
-MCP详细辅导写入PlanAction.guidance：why、concepts、steps、example、if_stuck、resources（title/url/start_here/evidence_ids），assistant_support给可直接发给AI的求助。小项目预览写入AlignmentPlan.project_brief：title、research_question、starting_advantage、why_this_advisor、student_fact_ids、professor_evidence_ids、workflow、first_step、assistant_prompt、deliverable、estimated_minutes、money_policy、upgrade_condition。两侧依据分别指用户已确认的已有能力与当前导师有效研究来源；仅身份材料不能证明项目对口。project_gaps非空表示还缺个性化项目，teaching_gaps非空表示还缺逐步帮助；host_refined标签不代表已满足质量。展示预览前补项目，详细辅导前补教学。默认7天每天1小时，期限支持1–31天，多导师共用总时间；计划可跳过。
 
 **完成项目后可升级邮件**：明确说“实际完成并核对后，可以把你做了什么、得到哪些可展示产物、观察到什么及局限写进邮件，让能力表达更具体”。给一条待完成后填真实信息的升级位置说明，和当前完整邮件分开。项目完成、本人角色及阅读状态须重新确认后才改入正文；AI生成代码/笔记不自动证明用户已理解或完成。它可能增强可讨论的依据，不能保证导师更欣赏、接收或提高录取概率。
 

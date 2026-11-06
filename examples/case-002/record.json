@@ -1,0 +1,29 @@
+{
+  "case": "case-p-shortprompt-01",
+  "tested_skill_version": "0.2.4 (user confirmed)",
+  "status": "exploratory pair; no formal blind scores",
+  "completeness": {
+    "both_main_answer_texts": "preserved",
+    "original_prompts_and_uploaded_resume": "not independently recovered; user confirms identical",
+    "visible_images_citation_popovers_and_tool_records": "not fully recovered",
+    "email_followups": "not collected"
+  },
+  "settings": {
+    "both_thinking": "disabled (latest user correction)",
+    "same_model": "user confirmed; exact model unverified",
+    "account": "free account (user reported)"
+  },
+  "transformations": [
+    {
+      "file": "without-skill.md",
+      "source": "without-skill.raw.txt",
+      "changes": "Remove paste-only backslash separator lines; unescape punctuation and HTML entities; collapse blank lines. No factual edits."
+    },
+    {
+      "file": "with-skill.md",
+      "source": "with-skill.raw.txt",
+      "changes": "URL tokens to links; preserve citation IDs without guessing targets; entity to name; image queries to labeled placeholders. No factual edits."
+    }
+  ],
+  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+}

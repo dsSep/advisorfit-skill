@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Keep archived cases byte-exact across operating systems.
+examples/** -text

@@ -6,10 +6,10 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.2.5'
+VERSION = '0.2.6'
 SKILL = ROOT / 'skills/advisorfit'
 RUNTIME_PATHS = ['SKILL.md'] + [f'references/{name}.md' for name in (
-    'research', 'preparation', 'outreach', 'mcp-contract', 'retrieval-evaluation')]
+    'research', 'preparation', 'outreach', 'retrieval-evaluation')]
 
 
 def runtime_bundle():
@@ -19,17 +19,17 @@ def runtime_bundle():
 
 
 def write_runtime():
-    target = ROOT / 'lib/skill-data.json'
+    target = ROOT / 'website/lib/skill-data.json'
     target.parent.mkdir(exist_ok=True)
     target.write_text(json.dumps(runtime_bundle(), ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
     return target
 
 
 def package_files():
-    roots = ['skills', 'docs', 'evals']
+    roots = ['skills']
     paths = [ROOT / name for name in (
-        'plugin.json', '.codex-plugin/plugin.json', 'README.md', 'LICENSE', 'CHANGELOG.md',
-        'scripts/package_skill.py', 'scripts/check_release.py', 'tests/package_test.py', 'lib/skill-data.json')]
+        'plugin.json', '.codex-plugin/plugin.json', 'README.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md',
+        'docs/installation.md', 'docs/usage.md', 'docs/privacy.md', 'docs/limitations.md')]
     for name in roots:
         paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc')
     return sorted(paths, key=lambda p: p.relative_to(ROOT).as_posix())
@@ -40,7 +40,7 @@ def build(target):
     target.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(target, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in package_files():
-            info = zipfile.ZipInfo(path.relative_to(ROOT).as_posix(), date_time=(2026, 11, 5, 0, 0, 0))
+            info = zipfile.ZipInfo(path.relative_to(ROOT).as_posix(), date_time=(2026, 11, 6, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, path.read_bytes())

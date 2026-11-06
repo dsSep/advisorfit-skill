@@ -1,4 +1,4 @@
-name: Release checks
+name: Checks
 on: [push, pull_request]
 jobs:
   verify:
@@ -9,12 +9,16 @@ jobs:
         with:
           node-version: '24'
           cache: npm
+          cache-dependency-path: website/package-lock.json
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: npm ci --ignore-scripts
+        working-directory: website
       - run: python scripts/package_skill.py
       - run: python scripts/check_release.py
       - run: python -m unittest discover -s tests -p '*_test.py'
       - run: npm test
+        working-directory: website
       - run: npx tsc --noEmit
+        working-directory: website

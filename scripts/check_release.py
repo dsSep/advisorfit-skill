@@ -15,7 +15,7 @@ def main():
     for name in ['plugin.json', '.codex-plugin/plugin.json']:
         if json.loads((ROOT / name).read_text('utf-8'))['version'] != VERSION:
             errors.append(f'version mismatch: {name}')
-    bundle = ROOT / 'lib/skill-data.json'
+    bundle = ROOT / 'website/lib/skill-data.json'
     if not bundle.exists() or json.loads(bundle.read_text('utf-8')) != runtime_bundle():
         errors.append('runtime bundle stale; run python scripts/package_skill.py')
     spec = importlib.util.spec_from_file_location('links', ROOT / 'skills/advisorfit/scripts/check_links.py')
@@ -41,7 +41,7 @@ def main():
         if not checksum.exists() or checksum.read_text('ascii').split()[0] != hashlib.sha256(target.read_bytes()).hexdigest():
             errors.append('ZIP checksum mismatch')
     print(json.dumps({'version': VERSION, 'status': 'fail' if errors else 'pass', 'errors': errors,
-                      'limitations': 'Offline checks only; no URL reachability, model behavior, MCP execution or comparative quality validation.'}, ensure_ascii=False, indent=2))
+                      'limitations': 'Offline checks only; no URL reachability, model behavior or comparative quality validation.'}, ensure_ascii=False, indent=2))
     return int(bool(errors))
 
 
