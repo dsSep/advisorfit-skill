@@ -57,3 +57,5 @@ Skill本身不提供独立数据存储服务；在ChatGPT／Codex中使用时，
 `skills/advisorfit/` 是完整Skill；`examples/` 保存可复查案例；`website/` 是在线体验源码。ChatGPT／Codex的Skill包不包含网站依赖。
 
 [版本变化](CHANGELOG.md) · [贡献与反馈](CONTRIBUTING.md) · [安全问题](SECURITY.md) · [MIT许可](LICENSE)
+
+[U-A大学数据科学专业导师选择情况与个人推荐](docs/whu-data-science-advisor-selections.md)
