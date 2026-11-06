@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-06",
+  "type": "development_behavior_samples",
+  "producer": "Codex isolated subagents, fork_turns=none",
+  "model": "Inherited from host; concrete model identifier and reasoning setting not exposed by the subagent tool",
+  "judging": "Developer-aware inspection plus independent defect review; not blind scoring",
+  "conditions": {
+    "control-course": "No Skill instructions; fixed fictional materials only",
+    "old": "Saved 0.2.7 core and outreach reference",
+    "new": "Candidate 0.2.8 core and outreach reference"
+  },
+  "replicates_per_case_condition": "Old: once; control course: once; new: once per documented candidate revision. No multiple-run stability estimate.",
+  "scope": "No web search, no memory intentionally supplied, no emails sent, no ChatGPT web evaluation, no live provider API calls",
+  "missing_case_followup": "我叫小明，现在是示例U大学专业C2026级在读硕士，想申请W.w老师担任硕士导师并加入课题组，不是申请学校录取，也不是助理。没有读过论文，没有其他项目。联系方式、成绩和入学年份不用在邮件里写，也没有附件。",
+  "candidate_instruction_sha256": {
+    "skills/advisorfit/SKILL.md": "c06ddda1d3d5474b4c84edb5d83c76569382cb02b3eeb16a96fb4fbb32ec5143",
+    "skills/advisorfit/references/outreach.md": "e9eae1703bdcbcba68093c7f691b4b2722465aa01fa1ffd9fd2d5f3a3fc460f4",
+    "skills/advisorfit/references/research.md": "c838d1943a8428b0bc109a88b0e949e2fd4ccd8f6bba9a91a01b6bbe705ec8fd"
+  },
+  "candidate": "0.2.8 final instructions after initial review",
+  "iterations": {
+    "candidate-1": "Initial candidate outputs and instructions preserved in candidate-1/; review in independent-review.md",
+    "final": "Three cases rerun from new contexts; missing information uses one followup; main new-*.md files are these final outputs"
+  },
+  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+}

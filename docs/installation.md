@@ -38,6 +38,6 @@ python scripts/check_release.py
 python -m unittest discover -s tests -p "*_test.py"
 ```
 
-输出为 `outputs/advisorfit-skill-0.2.7.zip` 及SHA256校验文件。网站构建和部署见[网站说明](https://github.com/dsSep/advisorfit-skill/tree/main/website)。
+输出为 `outputs/advisorfit-skill-0.2.8.zip` 及SHA256校验文件。网站构建和部署见[网站说明](https://github.com/dsSep/advisorfit-skill/tree/main/website)。
 
 格式参考：[OpenAI插件打包](https://developers.openai.com/plugins/build/plugins)、[Codex Skills](https://developers.openai.com/codex/skills)。平台能力可能变化，请以官方说明及实际入口为准。

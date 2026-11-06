@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-06",
+  "type": "development_behavior_samples",
+  "producer": "Codex isolated subagents, fork_turns=none",
+  "model": "Inherited from host; concrete model identifier and reasoning setting not exposed by the subagent tool",
+  "judging": "Developer-aware inspection plus independent defect review; not blind scoring",
+  "conditions": {
+    "control-course": "No Skill instructions; fixed fictional materials only",
+    "old": "Saved 0.2.7 core and outreach reference",
+    "new": "Candidate 0.2.8 core and outreach reference"
+  },
+  "replicates_per_case_condition": 1,
+  "scope": "No web search, no memory intentionally supplied, no emails sent, no ChatGPT web evaluation, no live provider API calls",
+  "missing_case_followup": "我叫小明，现在是示例U大学专业C2026级在读硕士，想申请W.w老师担任硕士导师并加入课题组，不是申请学校录取，也不是助理。没有读过论文，没有其他项目。联系方式、成绩和入学年份不用在邮件里写，也没有附件。",
+  "candidate_instruction_sha256": {
+    "skills/advisorfit/SKILL.md": "c06ddda1d3d5474b4c84edb5d83c76569382cb02b3eeb16a96fb4fbb32ec5143",
+    "skills/advisorfit/references/outreach.md": "18e1b49cd125b936a1326bc327126316e958217d6110d1196be6617e63fda19b",
+    "skills/advisorfit/references/research.md": "1b3fcea32263a0cd8658442c043555c7aadb2ee37e09c30ba88d1635fe1f7ee6"
+  },
+  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+}

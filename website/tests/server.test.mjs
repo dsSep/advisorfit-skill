@@ -26,7 +26,7 @@ test('real distribution core and task references reach the model request intact'
     fetcher:async(_url,options)=>{payload=JSON.parse(options.body);return new Response('data: {"model":"test-model","choices":[{"delta":{"content":"演示正文"},"finish_reason":"stop"}]}\n\ndata: [DONE]\n\n',{headers:{'Content-Type':'text/event-stream'}});}});
   const output=await (await h.generate(request({question:'请分析并写邮件，带我做第一步'}))).text();
   assert.match(output,/"type":"done"/);
-  assert.equal(fullSkill.version,'0.2.7');
+  assert.equal(fullSkill.version,'0.2.8');
   for(const name of ['SKILL.md','references/research.md','references/preparation.md','references/outreach.md']) {
     assert.ok(payload.messages[0].content.includes(fullSkill.files[name]),name);
   }

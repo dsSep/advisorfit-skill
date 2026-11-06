@@ -2,7 +2,7 @@
 
 让一句“这位导师适不适合我”，得到有来源的研究分析、具体的匹配解释和真实的进组邮件。
 
-**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[下载 v0.2.7](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.7)** · **[安装指南](docs/installation.md)** · **[完整案例对照](https://github.com/dsSep/advisorfit-skill/tree/main/examples)**
+**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[下载 v0.2.8](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.8)** · **[安装指南](docs/installation.md)** · **[完整案例对照](https://github.com/dsSep/advisorfit-skill/tree/main/examples)**
 
 ## 能帮你做什么
 
@@ -43,6 +43,7 @@
 
 - [小红／N.l：0.2.5完整对照](examples/case-001/README.md)：直接看“没有经验”如何变成准确的未知判断、论文如何连接现有实践、起步任务如何缩小。
 - [P.l：0.2.4完整对照](examples/case-002/README.md)：直接看研究匹配如何解释得更细、准备成本如何明确、结论如何更有判断依据。
+- [0.2.8邮件开发试用](examples/case-003/README.md)：课程实践、已有研究、补齐身份后写信的完整输入与输出。固定虚构材料的Codex子代理检查，与上述网页案例分开；旧版已做好的地方和新版尚有的重复也公开。
 
 案例中的具体优势、完整回答和已知问题一起公开。每条件仅一次，部分模型条件存在差异；这些记录不等同于统计显著性或录取效果证明。[完整测试条件与证据范围](docs/limitations.md)
 
