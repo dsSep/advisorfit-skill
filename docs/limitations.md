@@ -6,10 +6,10 @@ AdvisorFit旨在减少重复长提示的负担，让研究依据、真实经历�
 
 | 案例 | 测试版本 | 观察到的变化 | 重要限制 |
 |---|---|---|---|
-| [P.l](https://github.com/tianxiangliu-ds/advisorfit-skill/blob/main/examples/case-002/README.md) | 0.2.4 | 准备成本更明确、经历连接更细、减少数字匹配分 | 两组都有未知经历误判；模型型号未独立核实 |
-| [小红／N.l](https://github.com/tianxiangliu-ds/advisorfit-skill/blob/main/examples/case-001/README.md) | 0.2.5 | 未提供技能保留未知、逐篇解释论文关系、缩小起步材料 | 两页实际模型标识不同；仍有过强判断和DOI错误残留 |
+| [P.l](https://github.com/dsSep/advisorfit-skill/blob/main/examples/case-002/README.md) | 0.2.4 | 准备成本更明确、经历连接更细、减少数字匹配分 | 两组都有未知经历误判；模型型号未独立核实 |
+| [小红／N.l](https://github.com/dsSep/advisorfit-skill/blob/main/examples/case-001/README.md) | 0.2.5 | 未提供技能保留未知、逐篇解释论文关系、缩小起步材料 | 两页实际模型标识不同；仍有过强判断和DOI错误残留 |
 
-每个条件只有一次；案例为开发者知情对照，不是盲评。完整回答和缺陷一起公开，不以篇幅、论文数或调用数证明提升。历史案例不能证明0.2.6的效果，更不能判断重复稳定性。未取得完整正文的旧样本不用于评分。
+每个条件只有一次；案例为开发者知情对照，不是盲评。完整回答和缺陷一起公开，不以篇幅、论文数或调用数证明提升。历史案例不能证明0.2.7的效果，更不能判断重复稳定性。未取得完整正文的旧样本不用于评分。
 
 ## 在线体验的范围
 

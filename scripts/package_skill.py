@@ -6,7 +6,7 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.2.6'
+VERSION = '0.2.7'
 SKILL = ROOT / 'skills/advisorfit'
 RUNTIME_PATHS = ['SKILL.md'] + [f'references/{name}.md' for name in (
     'research', 'preparation', 'outreach', 'retrieval-evaluation')]

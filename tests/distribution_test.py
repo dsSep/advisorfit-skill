@@ -19,7 +19,7 @@ def module(name, path):
 class DistributionTests(unittest.TestCase):
     def test_skill_only_distribution_is_complete_without_site_or_internal_reports(self):
         pack = module('pack', ROOT / 'scripts/package_skill.py')
-        self.assertEqual(pack.VERSION, '0.2.6')
+        self.assertEqual(pack.VERSION, '0.2.7')
         with tempfile.TemporaryDirectory(dir=ROOT / "outputs") as temp:
             with zipfile.ZipFile(pack.build(Path(temp) / 'skill.zip')) as archive:
                 names = archive.namelist()

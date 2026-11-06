@@ -2,7 +2,7 @@
 
 让一句“这位导师适不适合我”，得到有来源的研究分析、具体的匹配解释和真实的进组邮件。
 
-**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[下载 v0.2.6](https://github.com/tianxiangliu-ds/advisorfit-skill/releases/tag/v0.2.6)** · **[安装指南](docs/installation.md)** · **[完整案例对照](https://github.com/tianxiangliu-ds/advisorfit-skill/tree/main/examples)**
+**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[下载 v0.2.7](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.7)** · **[安装指南](docs/installation.md)** · **[完整案例对照](https://github.com/dsSep/advisorfit-skill/tree/main/examples)**
 
 ## 能帮你做什么
 
@@ -35,7 +35,7 @@
 | 该怎样开始准备？ | 小红案例安排30天完善18篇报道；P.l案例提出扩展至100—200份政策文件 | 分别收束到先做5篇／复用现有40份，列出时间安排与检查办法 |
 | 我的基础能做什么？ | 已有方向与经历的联系，但部分解释较概括 | 进一步拆解真实操作、可迁移能力、导师问题和当前边界 |
 
-**Skill把高质量导师分析需要的步骤，变成可复用的工作方法。** 用户先用普通话提问，助手按研究、匹配、准备和联系的要求展开。[看看具体方法如何对应这些改善 →](https://github.com/tianxiangliu-ds/advisorfit-skill/blob/main/docs/why-advisorfit.md)
+**Skill把高质量导师分析需要的步骤，变成可复用的工作方法。** 用户先用普通话提问，助手按研究、匹配、准备和联系的要求展开。[看看具体方法如何对应这些改善 →](https://github.com/dsSep/advisorfit-skill/blob/main/docs/why-advisorfit.md)
 
 ### 看完整对照，亲自体验
 

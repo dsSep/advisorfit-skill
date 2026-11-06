@@ -28,7 +28,7 @@ test('historical comparison exposes both full answers, versions, limitations and
 
 test('download offers the actual versioned artifact and both supported-host instructions',()=>{
   const html=renderToStaticMarkup(React.createElement(DownloadSkill));
-  assert.match(html,/releases\/download\/v0.2.6\/advisorfit-skill-0.2.6.zip/);
+  assert.match(html,/releases\/download\/v0.2.7\/advisorfit-skill-0.2.7.zip/);
   assert.match(html,/installation.md#chatgpt/);assert.match(html,/installation.md#codex/);
   assert.match(html,/自行核对/);
 });

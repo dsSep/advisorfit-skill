@@ -1,5 +1,10 @@
 # 更新记录
 
+## 0.2.7 — 2026-11-06
+
+- GitHub维护者用户名更新为dsSep，统一安装、案例、下载和网页入口。
+- 发布使用新仓库地址的完整安装包；历史版本和原始测试回答保持原样。
+
 ## 0.2.6 — 2026-11-06
 
 - 聚焦ChatGPT／Codex的独立Skill，移除项目工具契约和内部数据结构依赖。
@@ -17,4 +22,4 @@
 - 补齐完整分发资源和安装说明，修正研究主线数量及时间范围规则。
 - 发布固定虚构材料的在线体验。
 
-历史版本：[GitHub Releases](https://github.com/tianxiangliu-ds/advisorfit-skill/releases)。版本记录描述功能变化，不代表效果提升已得到证明。
+历史版本：[GitHub Releases](https://github.com/dsSep/advisorfit-skill/releases)。版本记录描述功能变化，不代表效果提升已得到证明。
