@@ -15,12 +15,13 @@
   "candidate_instruction_sha256": {
     "skills/advisorfit/SKILL.md": "c06ddda1d3d5474b4c84edb5d83c76569382cb02b3eeb16a96fb4fbb32ec5143",
     "skills/advisorfit/references/outreach.md": "e9eae1703bdcbcba68093c7f691b4b2722465aa01fa1ffd9fd2d5f3a3fc460f4",
-    "skills/advisorfit/references/research.md": "c838d1943a8428b0bc109a88b0e949e2fd4ccd8f6bba9a91a01b6bbe705ec8fd"
+    "skills/advisorfit/references/research.md": "7a9cf60d6db497daecd511a042b31c52347d5c9831942da29d5e094e81d5c32b"
   },
   "candidate": "0.2.8 final instructions after initial review",
   "iterations": {
     "candidate-1": "Initial candidate outputs and instructions preserved in candidate-1/; review in independent-review.md",
     "final": "Three cases rerun from new contexts; missing information uses one followup; main new-*.md files are these final outputs"
   },
+  "candidate_instruction_hash_format": "SHA256 of UTF-8 text with LF line endings; source instruction files normalize CRLF for cross-platform verification. Archived reply hashes use exact saved bytes.",
   "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
 }
