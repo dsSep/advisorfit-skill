@@ -24,7 +24,7 @@ export function History() {
 
 export function DownloadSkill() {
   return <section className="download-section" id="download" aria-labelledby="download-title">
-    <div className="section-heading"><div><p className="eyebrow">03 / 下载使用</p><h2 id="download-title">把这套方法，带到你的助手里。</h2></div><p>完整Skill包含核心说明、研究、准备和邮件参考。只安装Skill，无需部署网站或配置模型密钥。</p></div>
+    <div className="section-heading"><div><p className="eyebrow">02 / 下载使用</p><h2 id="download-title">把这套方法，带到你的助手里。</h2></div><p>完整Skill包含核心说明、研究、准备和邮件参考。只安装Skill，无需部署网站或配置模型密钥。</p></div>
     <div className="download-actions"><a className="primary-link" href={`${repo}/releases/download/v0.2.7/advisorfit-skill-0.2.7.zip`}>下载完整Skill · v0.2.7 <span aria-hidden="true">↓</span></a><a href={`${repo}/blob/main/docs/installation.md`} target="_blank" rel="noopener noreferrer">安装与更新指南 ↗</a><a href={`${repo}/releases/tag/v0.2.7`} target="_blank" rel="noopener noreferrer">版本说明与校验值 ↗</a></div>
     <div className="install-grid"><article><h3>ChatGPT</h3><p>在支持自定义插件的账户中导入完整包，再在新聊天选择AdvisorFit。可用入口依账户而异；上传文件作参考不等于原生安装。</p><a href={`${repo}/blob/main/docs/installation.md#chatgpt`} target="_blank" rel="noopener noreferrer">查看ChatGPT安装步骤 ↗</a></article><article><h3>Codex</h3><p>用Skill Installer安装仓库中的技能目录，或将完整目录复制到项目的 .agents/skills/，开启新会话后调用 $advisorfit。</p><a href={`${repo}/blob/main/docs/installation.md#codex`} target="_blank" rel="noopener noreferrer">查看Codex安装步骤 ↗</a></article></div>
     <p className="field-help">分析真实导师需要宿主的搜索与文件能力。结果和邮件请自行核对；研究匹配不代表正在招生。</p>
