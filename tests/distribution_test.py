@@ -6,6 +6,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import zipfile
+import shutil
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,9 +18,69 @@ def module(name, path):
     return result
 
 class DistributionTests(unittest.TestCase):
+    def test_workbuddy_import_has_one_skill_root_and_all_referenced_resources(self):
+        adapter = module('workbuddy', ROOT / 'scripts/workbuddy_package.py')
+        pack = module('pack', ROOT / 'scripts/package_skill.py')
+        with tempfile.TemporaryDirectory(dir=ROOT / 'outputs') as temp:
+            target = adapter.build_workbuddy(ROOT, pack.VERSION, Path(temp) / 'workbuddy.zip')
+            with zipfile.ZipFile(target) as archive:
+                names = archive.namelist()
+                self.assertTrue(all(n.startswith('advisorfit/') and '..' not in Path(n).parts for n in names))
+                self.assertIn('advisorfit/SKILL.md', names)
+                self.assertIn('advisorfit/INSTALL.md', names)
+                self.assertIn('advisorfit/LICENSE', names)
+                self.assertFalse(any('plugin.json' in n or '/website/' in n or '/evals/' in n or '/examples/' in n for n in names))
+                manifest = json.loads(archive.read('advisorfit/DISTRIBUTION.json'))
+                self.assertEqual(manifest['source_skill_version'], pack.VERSION)
+                for name in pack.RUNTIME_PATHS[1:]:
+                    expected = (pack.SKILL / name).read_text('utf-8').encode('utf-8')
+                    self.assertEqual(archive.read('advisorfit/' + name), expected)
+                    self.assertEqual(manifest['source_hashes'][name], hashlib.sha256(expected).hexdigest())
+                self.assertIn('advisorfit/scripts/check_links.py', names)
+                text = archive.read('advisorfit/SKILL.md').decode('utf-8')
+                self.assertIn('@references/outreach.md', text)
+                self.assertIn('WorkBuddy负责', text)
+
+    def test_workbuddy_build_is_reproducible_with_platform_manifest(self):
+        adapter = module('workbuddy', ROOT / 'scripts/workbuddy_package.py')
+        pack = module('pack', ROOT / 'scripts/package_skill.py')
+        with tempfile.TemporaryDirectory(dir=ROOT / 'outputs') as temp:
+            target = Path(temp)
+            first = adapter.build_workbuddy(ROOT, pack.VERSION, target / 'a.zip').read_bytes()
+            self.assertEqual(first, adapter.build_workbuddy(ROOT, pack.VERSION, target / 'b.zip').read_bytes())
+            with zipfile.ZipFile(target / 'a.zip') as archive:
+                self.assertEqual(json.loads(archive.read('advisorfit/DISTRIBUTION.json'))['platform'], 'WorkBuddy')
+
+    def test_workbuddy_resource_change_updates_archive_and_manifest(self):
+        adapter = module('workbuddy', ROOT / 'scripts/workbuddy_package.py')
+        with tempfile.TemporaryDirectory(dir=ROOT / 'outputs') as temp:
+            fixture = Path(temp)
+            for name in ['skills/advisorfit', 'adapters/workbuddy']:
+                shutil.copytree(ROOT / name, fixture / name)
+            (fixture / 'docs').mkdir()
+            shutil.copyfile(ROOT / 'docs/workbuddy.md', fixture / 'docs/workbuddy.md')
+            shutil.copyfile(ROOT / 'LICENSE', fixture / 'LICENSE')
+            before = adapter.build_workbuddy(fixture, 'fixture', fixture / 'before.zip').read_bytes()
+            changed = 'Updated outreach reference for freshness verification.\n'
+            (fixture / 'skills/advisorfit/references/outreach.md').write_text(changed, encoding='utf-8', newline='\n')
+            after = adapter.build_workbuddy(fixture, 'fixture', fixture / 'after.zip')
+            self.assertNotEqual(before, after.read_bytes())
+            with zipfile.ZipFile(after) as archive:
+                self.assertEqual(archive.read('advisorfit/references/outreach.md'), changed.encode())
+                manifest = json.loads(archive.read('advisorfit/DISTRIBUTION.json'))
+                self.assertEqual(manifest['source_hashes']['references/outreach.md'], hashlib.sha256(changed.encode()).hexdigest())
+
+    def test_workbuddy_case_has_matching_hashes_and_extracted_original_email(self):
+        folder = ROOT / 'examples/case-004'
+        record = json.loads((folder / 'record.json').read_text('utf-8'))
+        for name, digest in record['sha256'].items():
+            self.assertEqual(hashlib.sha256((folder / name).read_bytes()).hexdigest(), digest, name)
+        self.assertIn((folder / 'email.md').read_text('utf-8').strip(), (folder / 'report.md').read_text('utf-8'))
+        self.assertFalse(record['private_source_published'])
+
     def test_skill_only_distribution_is_complete_without_site_or_internal_reports(self):
         pack = module('pack', ROOT / 'scripts/package_skill.py')
-        self.assertEqual(pack.VERSION, '0.2.8')
+        self.assertEqual(pack.VERSION, '0.2.9')
         with tempfile.TemporaryDirectory(dir=ROOT / "outputs") as temp:
             with zipfile.ZipFile(pack.build(Path(temp) / 'skill.zip')) as archive:
                 names = archive.namelist()

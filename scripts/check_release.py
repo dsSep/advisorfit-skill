@@ -8,6 +8,8 @@ import sys
 import zipfile
 
 from package_skill import ROOT, VERSION, package_files, runtime_bundle
+from workbuddy_package import build_workbuddy
+import tempfile
 
 
 def main():
@@ -40,6 +42,14 @@ def main():
         checksum = target.with_suffix('.zip.sha256')
         if not checksum.exists() or checksum.read_text('ascii').split()[0] != hashlib.sha256(target.read_bytes()).hexdigest():
             errors.append('ZIP checksum mismatch')
+    wb = ROOT / 'outputs' / f'advisorfit-workbuddy-{VERSION}.zip'
+    with tempfile.TemporaryDirectory(dir=ROOT / 'outputs') as temp:
+        fresh = build_workbuddy(ROOT, VERSION, Path(temp) / 'fresh.zip')
+        if not wb.exists() or wb.read_bytes() != fresh.read_bytes():
+            errors.append('WorkBuddy ZIP stale or missing')
+        checksum = wb.with_suffix('.zip.sha256')
+        if wb.exists() and (not checksum.exists() or checksum.read_text('ascii').split()[0] != hashlib.sha256(wb.read_bytes()).hexdigest()):
+            errors.append('WorkBuddy ZIP checksum mismatch')
     print(json.dumps({'version': VERSION, 'status': 'fail' if errors else 'pass', 'errors': errors,
                       'limitations': 'Offline checks only; no URL reachability, model behavior or comparative quality validation.'}, ensure_ascii=False, indent=2))
     return int(bool(errors))

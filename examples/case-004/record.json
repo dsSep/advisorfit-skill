@@ -1,0 +1,11 @@
+{
+  "case": "case-004",
+  "kind": "single real run, deidentified, non-blind content audit",
+  "runtime_skill": "0.2.8",
+  "adapter_release": "0.2.9",
+  "read_date": "2026-11-07 Asia/Shanghai",
+  "private_source_published": false,
+  "raw_tool_logs_published": false,
+  "source_links_preserved": 34,
+  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+}

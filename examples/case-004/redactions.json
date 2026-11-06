@@ -1,0 +1,225 @@
+{
+  "policy": "Only de-identification/generalization; substantive factual errors, omissions and recommendation wording retained. Source share URL, local paths, IDs, internal reasoning and private memory are not republished. This is not guaranteed irreversible anonymization.",
+  "changes": [
+    {
+      "file": "report",
+      "changes": [
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "小明",
+          "count": 4
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "U-H大学",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "某商业银行",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "某学术数据智能体竞赛",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "科研选题评估智能体",
+          "count": 3
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "AI交互特征、信任与决策行为研究",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "代码智能体框架",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "数百",
+          "count": 4
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "多个模块化 Skill",
+          "count": 2
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "近期",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "近期",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "本科阶段",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "本科阶段",
+          "count": 1
+        },
+        {
+          "category": "email",
+          "replacement": "[邮箱已移除]",
+          "count": 3
+        },
+        {
+          "category": "phone",
+          "replacement": "[电话已移除]",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "file": "resume",
+      "changes": [
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "小明",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "U-H大学",
+          "count": 3
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "某商业银行",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "某学术数据智能体竞赛",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "科研选题评估智能体",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "AI交互特征、信任与决策行为研究",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "代码智能体框架",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "数百",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "多个模块化 Skill",
+          "count": 1
+        },
+        {
+          "category": "email",
+          "replacement": "[邮箱已移除]",
+          "count": 1
+        },
+        {
+          "category": "phone",
+          "replacement": "[电话已移除]",
+          "count": 1
+        },
+        {
+          "category": "sex_age_hometown",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "file": "response",
+      "changes": [
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "小明",
+          "count": 5
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "U-H大学",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "某学术数据智能体竞赛",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "科研选题评估智能体",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "AI交互特征、信任与决策行为研究",
+          "count": 1
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "数百",
+          "count": 2
+        },
+        {
+          "category": "identity_or_distinctive_background",
+          "replacement": "多个模块化 Skill",
+          "count": 1
+        },
+        {
+          "category": "email",
+          "replacement": "[邮箱已移除]",
+          "count": 2
+        },
+        {
+          "category": "phone",
+          "replacement": "[电话已移除]",
+          "count": 1
+        },
+        {
+          "category": "local_path",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "additional_changes": [
+    {
+      "file": "resume.txt",
+      "category": "personal date ranges and business counts",
+      "replacement": "日期与业务数量概括；不修改导师论文日期和研究方法"
+    },
+    {
+      "file": "email.md",
+      "category": "extracted from report chapter 8",
+      "replacement": "仅提取已脱敏原邮件；未重写或润色"
+    },
+    {
+      "file": "prompt.md",
+      "category": "platform skill selector and original attachment path",
+      "replacement": "保留选择Skill和提供附件的事实；移除私人路径与原附件名"
+    },
+    {
+      "file": "response.md",
+      "category": "local artifact link",
+      "replacement": "仅删除本地链接目标，保留链接后所有说明文字"
+    }
+  ]
+}

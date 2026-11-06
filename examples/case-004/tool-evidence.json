@@ -1,0 +1,62 @@
+{
+  "model_metadata": {
+    "modelId": "hy4free",
+    "modelName": "Hy4",
+    "responseModelId": "hy4-free"
+  },
+  "reasoning_setting": "not exposed",
+  "skill_selection": "Explicit user resource link for advisorfit",
+  "actual_call": {
+    "tool": "Skill",
+    "name": "advisorfit",
+    "status": "executed"
+  },
+  "installed_version": "0.2.8 from current local frontmatter, plus exact reference text matching; not inferred from assistant self-description",
+  "references": {
+    "research": {
+      "tool": "Read",
+      "status": "executed",
+      "reference": "references/research.md",
+      "matches_0_2_8_canonical_text": true,
+      "normalized_sha256": "344a772042a701ed4ada25f08ea3854fad77715ebfb154db0b45c1944caee043"
+    },
+    "preparation": {
+      "tool": "Read",
+      "status": "executed",
+      "reference": "references/preparation.md",
+      "matches_0_2_8_canonical_text": true,
+      "normalized_sha256": "e31e0ff3b24e8d1516e1f59a455348128a22d6bdd10b2f7ab3bdde6b345aec56"
+    },
+    "outreach": {
+      "tool": "Read",
+      "status": "executed",
+      "reference": "references/outreach.md",
+      "matches_0_2_8_canonical_text": true,
+      "normalized_sha256": "11993aafefa26631ea4eb03fc7dd4bffa493a2abb0cc58990f2f1918b6388771"
+    }
+  },
+  "tool_count": 92,
+  "tool_counts": {
+    "Bash": 5,
+    "Edit": 10,
+    "Glob": 1,
+    "Read": 7,
+    "Skill": 2,
+    "TaskCreate": 4,
+    "TaskUpdate": 6,
+    "WebFetch": 43,
+    "WebSearch": 11,
+    "Write": 2,
+    "present_files": 1
+  },
+  "elapsed_ms": 1011599,
+  "initial_pdf_read_failed": true,
+  "pdf_text_recovered": "pdftotext command followed by successful Read",
+  "artifact_reconstruction": {
+    "successful_edits_applied": 10,
+    "equals_local_artifact_text": true
+  },
+  "memory_write_observed": true,
+  "memory_contents_published": false,
+  "usage_note": "Usage fields are a snapshot with unclear aggregation/billing scope; not used as total cost."
+}

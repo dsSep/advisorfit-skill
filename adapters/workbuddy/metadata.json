@@ -1,0 +1,19 @@
+{
+  "name": "advisorfit",
+  "display_name": "AdvisorFit 导师分析与套磁",
+  "display_name_en": "AdvisorFit",
+  "description": "调研或比较导师、结合简历分析研究匹配，并准备入门实践与个性化申请进组邮件时使用。",
+  "description_zh": "核对导师研究与论文，连接真实经历，设计入门实践，并撰写可审阅的个性化套磁邮件。",
+  "description_en": "Research and compare academic advisors, connect applicant experience to research, and draft personalized outreach emails.",
+  "author": "AdvisorFit",
+  "examples_zh": [
+    "这是我的简历，帮我看看这位导师适不适合我。",
+    "结合我的背景，比较这几位导师。",
+    "根据已经核对的材料，写一封申请加入课题组的邮件。"
+  ],
+  "examples_en": [
+    "Assess whether this advisor fits my background.",
+    "Compare these advisors.",
+    "Draft an email asking to join this research group."
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "advisorfit",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "导师深度研究、入门学习指导与个性化套磁；宿主搜索，来源可核查。",
   "author": {
     "name": "AdvisorFit"

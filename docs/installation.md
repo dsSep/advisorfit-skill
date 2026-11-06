@@ -1,6 +1,6 @@
 # 安装与更新
 
-AdvisorFit面向ChatGPT和Codex。完整技能包含核心说明、按任务读取的研究／准备／邮件参考，以及链接检查脚本；请保留整个目录。
+AdvisorFit支持ChatGPT、Codex和WorkBuddy。完整技能包含核心说明、按任务读取的研究／准备／邮件参考，以及链接检查脚本；请保留整个目录。
 
 ## ChatGPT
 
@@ -20,6 +20,10 @@ https://github.com/dsSep/advisorfit-skill/tree/main/skills/advisorfit
 
 需要以插件分发时，仓库及发布包保留 `plugin.json` 和 `.codex-plugin/plugin.json`。仅使用Skill目录时无需安装网站依赖。
 
+## WorkBuddy
+
+下载独立的 **advisorfit-workbuddy-0.2.9.zip**，在客户端上传技能并启用。不要用ChatGPT插件ZIP代替。[完整配置教程与验证范围](workbuddy.md)
+
 ## 检查是否生效
 
 用虚构背景提问：“使用AdvisorFit，分析这位导师适不适合我。”检查助手能否读取核心及相关参考，能否给出有来源的匹配解释。脚本运行、文件复制或界面选中本身都不能证明回答质量。
@@ -38,6 +42,6 @@ python scripts/check_release.py
 python -m unittest discover -s tests -p "*_test.py"
 ```
 
-输出为 `outputs/advisorfit-skill-0.2.8.zip` 及SHA256校验文件。网站构建和部署见[网站说明](https://github.com/dsSep/advisorfit-skill/tree/main/website)。
+输出为 `outputs/advisorfit-skill-0.2.9.zip` 、`outputs/advisorfit-workbuddy-0.2.9.zip`及各自SHA256校验文件。网站构建和部署见[网站说明](https://github.com/dsSep/advisorfit-skill/tree/main/website)。
 
 格式参考：[OpenAI插件打包](https://developers.openai.com/plugins/build/plugins)、[Codex Skills](https://developers.openai.com/codex/skills)。平台能力可能变化，请以官方说明及实际入口为准。

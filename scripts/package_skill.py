@@ -6,7 +6,7 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.2.8'
+VERSION = '0.2.9'
 SKILL = ROOT / 'skills/advisorfit'
 RUNTIME_PATHS = ['SKILL.md'] + [f'references/{name}.md' for name in (
     'research', 'preparation', 'outreach', 'retrieval-evaluation')]
@@ -29,7 +29,7 @@ def package_files():
     roots = ['skills']
     paths = [ROOT / name for name in (
         'plugin.json', '.codex-plugin/plugin.json', 'README.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md',
-        'docs/installation.md', 'docs/usage.md', 'docs/privacy.md', 'docs/limitations.md')]
+        'docs/installation.md', 'docs/workbuddy.md', 'docs/usage.md', 'docs/privacy.md', 'docs/limitations.md')]
     for name in roots:
         paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc')
     return sorted(paths, key=lambda p: p.relative_to(ROOT).as_posix())
@@ -53,10 +53,13 @@ def main():
     args = parser.parse_args()
     print(write_runtime().relative_to(ROOT))
     if not args.runtime_only:
-        target = build(ROOT / 'outputs' / f'advisorfit-skill-{VERSION}.zip')
-        digest = hashlib.sha256(target.read_bytes()).hexdigest()
-        target.with_suffix('.zip.sha256').write_text(f'{digest}  {target.name}\n', encoding='ascii')
-        print(f'{target.relative_to(ROOT)} SHA256 {digest}')
+        from workbuddy_package import build_workbuddy
+        targets = [build(ROOT / 'outputs' / f'advisorfit-skill-{VERSION}.zip'),
+                   build_workbuddy(ROOT, VERSION, ROOT / 'outputs' / f'advisorfit-workbuddy-{VERSION}.zip')]
+        for target in targets:
+            digest = hashlib.sha256(target.read_bytes()).hexdigest()
+            target.with_suffix('.zip.sha256').write_text(f'{digest}  {target.name}\n', encoding='ascii')
+            print(f'{target.relative_to(ROOT)} SHA256 {digest}')
 
 
 if __name__ == '__main__':
