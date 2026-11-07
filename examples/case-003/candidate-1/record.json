@@ -17,5 +17,15 @@
     "skills/advisorfit/references/outreach.md": "18e1b49cd125b936a1326bc327126316e958217d6110d1196be6617e63fda19b",
     "skills/advisorfit/references/research.md": "1b3fcea32263a0cd8658442c043555c7aadb2ee37e09c30ba88d1635fe1f7ee6"
   },
-  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+  "privacy_schema": 1,
+  "privacy_note": "公开身份、院校、专业与来源入口已匿名化；原始记录仅保留于维护者私有档案。校验值对应匿名副本，不是原始输出字节。",
+  "sha256": {
+    "instructions/references/outreach.md": "18e1b49cd125b936a1326bc327126316e958217d6110d1196be6617e63fda19b",
+    "instructions/references/research.md": "1b3fcea32263a0cd8658442c043555c7aadb2ee37e09c30ba88d1635fe1f7ee6",
+    "instructions/SKILL.md": "c06ddda1d3d5474b4c84edb5d83c76569382cb02b3eeb16a96fb4fbb32ec5143",
+    "new-course.md": "ff88bfd21bda46bfc3a09be1a31b18a5808fd418de60e4c082652433d1dd63af",
+    "new-missing-turn1.md": "d6c59c61c8581b1a5a58cf80fbdf54fe9622ec6e8c686fcafe2582ce8ae072f2",
+    "new-missing-turn2.md": "b113aada0ddd5ef06720d7ae0b4d5b9eee92e0988748e19a0e6c094dc9554f99",
+    "new-research.md": "77b50f8663e198ccb91fe58c67944c364a2825d81fee7321f078efb5e158c2ee"
+  }
 }

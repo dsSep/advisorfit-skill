@@ -1,0 +1,1 @@
+ALTER TABLE `demo_usage` ADD `budget_micros` integer DEFAULT 150000 NOT NULL;

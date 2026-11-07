@@ -80,7 +80,7 @@ class DistributionTests(unittest.TestCase):
 
     def test_skill_only_distribution_is_complete_without_site_or_internal_reports(self):
         pack = module('pack', ROOT / 'scripts/package_skill.py')
-        self.assertEqual(pack.VERSION, '0.2.9')
+        self.assertEqual(pack.VERSION, '0.2.10')
         with tempfile.TemporaryDirectory(dir=ROOT / "outputs") as temp:
             with zipfile.ZipFile(pack.build(Path(temp) / 'skill.zip')) as archive:
                 names = archive.namelist()
@@ -135,6 +135,15 @@ class DistributionTests(unittest.TestCase):
             for item in case['comparisons']:
                 for key, condition in [('without', 'without-skill'), ('with', 'with-skill')]:
                     self.assertIn(item[key], (folder / (condition + '.raw.txt')).read_text('utf-8'))
+
+    def test_public_case_records_are_anonymous_copies(self):
+        for record in (ROOT / 'examples').rglob('record.json'):
+            data = json.loads(record.read_text('utf-8'))
+            self.assertEqual(data['privacy_schema'], 1)
+            for source in record.parent.rglob('*'):
+                if source.is_file():
+                    self.assertNotIn('.edu.cn', source.read_text('utf-8'), str(source))
+                    self.assertNotIn('chatgpt.com/share/', source.read_text('utf-8'), str(source))
 
     def test_link_checker_identifies_placeholder(self):
         links = module('links', ROOT / 'skills/advisorfit/scripts/check_links.py')

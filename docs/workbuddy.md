@@ -4,7 +4,7 @@ AdvisorFit可在WorkBuddy中作为本地Skill导入。研究、匹配、准备�
 
 ## 下载安装
 
-1. 从[正式发布页](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.9)下载 **advisorfit-workbuddy-0.2.9.zip**，不要选ChatGPT／Codex的插件包。
+1. 从[正式发布页](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.10)下载 **advisorfit-workbuddy-0.2.10.zip**，不要选ChatGPT／Codex的插件包。
 2. 在WorkBuddy左侧进入「专家·技能·连接器」→「技能」→「添加技能」→「上传技能」，选择ZIP。具体文字以客户端版本为准。
 3. 在「已安装」中找到 **AdvisorFit 导师分析与套磁** 并启用，新建任务后通过技能选择器选择它，或输入 `/` 后选择对应技能。
 4. 使用宿主当前已授权的模型、搜索与文件能力。本Skill无需额外API Key，不需要配置连接器，也不自动发送邮件。
@@ -45,9 +45,9 @@ advisorfit/
 
 ## 已有证据与限制
 
-[真实运行的脱敏记录](https://github.com/dsSep/advisorfit-skill/tree/main/examples/case-004)显示：WorkBuddy调用了AdvisorFit，读取研究、准备和邮件参考，恢复读取PDF后完成导师比较与完整邮件。该次安装元数据为0.2.8，三份参考文本与仓库0.2.8一致；核心做了WorkBuddy宿主和参考入口适配。它不是0.2.9新ZIP的客户端导入验收，也不是无Skill对照实验。
+[真实运行的脱敏记录](https://github.com/dsSep/advisorfit-skill/tree/main/examples/case-004)显示：WorkBuddy调用了AdvisorFit，读取研究、准备和邮件参考，恢复读取PDF后完成导师比较与完整邮件。该次安装元数据为0.2.8，三份参考文本与仓库0.2.8一致；核心做了WorkBuddy宿主和参考入口适配。它不是0.2.10新ZIP的客户端导入验收，也不是无Skill对照实验。
 
-0.2.9适配包已检查结构、资源一致性和可重复打包；仍需在使用者客户端确认该ZIP能导入、被实际调用。不能以一次运行宣称所有模型、客户端版本或学校都验证通过。
+0.2.10适配包已检查结构、资源一致性和可重复打包；仍需在使用者客户端确认该ZIP能导入、被实际调用。不能以一次运行宣称所有模型、客户端版本或学校都验证通过。
 
 ## 隐私、更新与卸载
 

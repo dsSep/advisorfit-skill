@@ -10,4 +10,5 @@ export const demoUsage = sqliteTable("demo_usage", {
   inputTokens: integer("input_tokens"),
   outputTokens: integer("output_tokens"),
   totalTokens: integer("total_tokens"),
+  budgetMicros: integer("budget_micros").notNull().default(150000),
 }, (table) => [index("demo_usage_day_user_idx").on(table.day, table.userKey), index("demo_usage_user_busy_idx").on(table.userKey, table.busyUntil)]);

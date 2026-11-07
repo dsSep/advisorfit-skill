@@ -6,6 +6,19 @@
   "read_date": "2026-11-07 Asia/Shanghai",
   "private_source_published": false,
   "raw_tool_logs_published": false,
-  "source_links_preserved": 34,
-  "historical_hash_note": "Identity fields and source links anonymized; old byte checksums retired. Original private records are not distributed."
+  "privacy_schema": 1,
+  "privacy_note": "公开身份、院校、专业与来源入口已匿名化；原始记录仅保留于维护者私有档案。校验值对应匿名副本，不是原始输出字节。",
+  "sha256": {
+    "audit.md": "06ac1436635890e234c49fe53caaf22ef8d447d76b25bd3a279489904df353a5",
+    "email.md": "f3851f113433707177c79cc7ff40c47bb29d9fec53ddd6ad83080925cdd3ac0f",
+    "prompt.md": "8a295705d58ef9c9a0055133ed20937aab7438ac99e9d656415ac20c6b731853",
+    "README.md": "50e948c2fb14bacf820322466fe8c1e8bc87da24d2540d2e018dab313dbeab38",
+    "redactions.json": "e60a19b3739d5f9b339c90d19c1a14ae123f9691e88495fd25b7fb9aeea2e02f",
+    "report.md": "967ba6d856bc1e16b5ce5ce1f6c70d1e4ff189b8ea6e10887e0ce92439dba313",
+    "response.md": "e6e1b0a24b10462866fe5b8b95ed1cdc4de2abaf622f5cfa8c7df603eee6384b",
+    "resume.txt": "a472b426ffbb764448f00e03763cb0ad156d3474016798d078358aebae515044",
+    "source-checks.md": "bbf6dfc4b2e0e0681a82ed26e65ab7b83c1d2dbc8d6725a51b65117672cff323",
+    "tool-evidence.json": "0bf3ab9da0e4d27a1ec8db13e4e32bcf2a7a57076188450c6ebf2c600dc79e43"
+  },
+  "source_links_policy": "原始来源入口仅保留私有档案，公开副本使用匿名标签。"
 }

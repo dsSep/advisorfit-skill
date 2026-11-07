@@ -2,7 +2,7 @@
 
 让一句“这位导师适不适合我”，得到有来源的研究分析、具体的匹配解释和真实的进组邮件。
 
-**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[下载 v0.2.9](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.9)** · **[安装指南](docs/installation.md)** · **[完整案例对照](https://github.com/dsSep/advisorfit-skill/tree/main/examples)**
+**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[下载 v0.2.10](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.10)** · **[安装指南](docs/installation.md)** · **[完整案例对照](https://github.com/dsSep/advisorfit-skill/tree/main/examples)**
 
 ## 能帮你做什么
 
@@ -26,7 +26,7 @@
 
 ## 使用Skill，回答具体好在哪里？
 
-**已公开案例显示：Skill组在背景判断、论文理解和准备安排等关键环节，给出了明显更具体、更有帮助的回答。** 这些差异都可以逐句查看完整原文。
+**已公开案例显示：Skill组在背景判断、论文理解和准备安排等关键环节，给出了明显更具体、更有帮助的回答。** 这些差异都可以逐句查看匿名全文。
 
 | 关键问题 | 无Skill的实际回答 | 使用AdvisorFit后的改善 |
 |---|---|---|

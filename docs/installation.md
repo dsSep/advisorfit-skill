@@ -22,7 +22,7 @@ https://github.com/dsSep/advisorfit-skill/tree/main/skills/advisorfit
 
 ## WorkBuddy
 
-下载独立的 **advisorfit-workbuddy-0.2.9.zip**，在客户端上传技能并启用。不要用ChatGPT插件ZIP代替。[完整配置教程与验证范围](workbuddy.md)
+下载独立的 **advisorfit-workbuddy-0.2.10.zip**，在客户端上传技能并启用。不要用ChatGPT插件ZIP代替。[完整配置教程与验证范围](workbuddy.md)
 
 ## 检查是否生效
 
@@ -42,6 +42,6 @@ python scripts/check_release.py
 python -m unittest discover -s tests -p "*_test.py"
 ```
 
-输出为 `outputs/advisorfit-skill-0.2.9.zip` 、`outputs/advisorfit-workbuddy-0.2.9.zip`及各自SHA256校验文件。网站构建和部署见[网站说明](https://github.com/dsSep/advisorfit-skill/tree/main/website)。
+输出为 `outputs/advisorfit-skill-0.2.10.zip` 、`outputs/advisorfit-workbuddy-0.2.10.zip`及各自SHA256校验文件。网站构建和部署见[网站说明](https://github.com/dsSep/advisorfit-skill/tree/main/website)。
 
 格式参考：[OpenAI插件打包](https://developers.openai.com/plugins/build/plugins)、[Codex Skills](https://developers.openai.com/codex/skills)。平台能力可能变化，请以官方说明及实际入口为准。
