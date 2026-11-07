@@ -1,64 +1,46 @@
 # AdvisorFit
 
-让一句“这位导师适不适合我”，得到有来源的研究分析、具体的匹配解释和真实的进组邮件。
+导师调研与套磁 Skill：用一句普通提问，了解导师研究、解释与你经历的关系，再准备可审阅的申请进组邮件。
 
-**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[下载 v0.2.10](https://github.com/dsSep/advisorfit-skill/releases/tag/v0.2.10)** · **[安装指南](docs/installation.md)** · **[完整案例对照](https://github.com/dsSep/advisorfit-skill/tree/main/examples)**
+**[在线体验](https://advisorfit-demo.l978542784.chatgpt.site)** · **[安装图示](docs/installation.md)** · **[案例对照](examples/README.md)**
+
+## 下载并安装
+
+**只下载你所用平台的一份 ZIP，直接上传，不需要解压；不要下载 GitHub 的 Source code。**
+
+| 使用平台 | 直接下载 | 上传到哪里 | 看图操作 |
+|---|---|---|---|
+| **WorkBuddy** | [下载技能包 · v0.2.10](https://github.com/dsSep/advisorfit-skill/releases/download/v0.2.10/advisorfit-workbuddy-0.2.10.zip) | 专家·技能·连接器 → 技能 → 添加技能 → 上传技能 | [WorkBuddy 两步图示](docs/installation.md#workbuddy) |
+| **Codex 桌面** | [下载插件包 · v0.2.10](https://github.com/dsSep/advisorfit-skill/releases/download/v0.2.10/advisorfit-skill-0.2.10.zip) | 自定义 → 插件 → 添加 → 上传插件压缩包 | [Codex 两步图示](docs/installation.md#codex) |
+| **ChatGPT** | [下载插件包 · v0.2.10](https://github.com/dsSep/advisorfit-skill/releases/download/v0.2.10/advisorfit-skill-0.2.10.zip) | 支持自定义插件的环境中导入，入口依账户而异 | [ChatGPT 说明](docs/installation.md#chatgpt) |
+
+WorkBuddy 的文件名以 `advisorfit-workbuddy-` 开头；Codex／ChatGPT 以 `advisorfit-skill-` 开头。安装 AdvisorFit 无需配置网站、MCP 或另一套 API Key。
+
+安装后**新建任务／聊天，选择 AdvisorFit**，提供虚构或脱敏背景，再提问：
+
+> 这是我的简历，帮我看看这位导师适不适合我，再写一封申请进组的邮件。
 
 ## 能帮你做什么
 
-- **找导师**：提供背景和学校／院系，整理候选、研究差异和需要确认的条件。
-- **分析一位导师**：理解论文与研究问题，把你的实际经历连接到可参与的工作。
-- **比较多位导师**：按同一标准比较，解释优先联系谁，以及判断的边界。
+- **找导师**：背景＋学校／院系，整理值得进一步了解的候选。
+- **分析一位导师**：理解论文、连接实际经历，说明匹配依据和未知条件。
+- **比较几位导师**：按同一标准解释联系顺序；确定目标后继续准备项目或邮件。
 
-确定导师后，可继续设计低成本入门项目，或准备完整的申请进组邮件。项目不是联系导师的前提；没有完成的项目不会自动成为申请经历。
+建议项目不会自动变成已完成经历；未提供的能力也不应直接判断为不会。邮件由你审阅、自行发送。[使用示例与后续辅导](docs/usage.md)
 
-## 怎么开始
+<details>
+<summary>实际回答的改善、已知问题与完整案例</summary>
 
-安装到支持Skill的 **ChatGPT、Codex或WorkBuddy**，提供虚构或脱敏简历，再提问：
+公开案例展示了更具体的经历解释、未知能力处理和更小的起步范围，也保留归类错误、推断过强及邮件过密等问题。案例已匿名化；单次及模型条件差异不支持普遍增益、统计显著性或录取效果结论。
 
-> 这是我的简历，帮我看看这位导师适不适合我。
+[看完整对照](examples/README.md) · [邮件开发试用](examples/case-003/README.md) · [WorkBuddy真实运行](examples/case-004/README.md) · [方法与改进依据](docs/why-advisorfit.md) · [证据限制](docs/limitations.md)
 
-> 我想去这所学校，但还没有目标导师，帮我找找。
-
-> 这几位导师我该先联系谁？
-
-[安装与更新](docs/installation.md) · [WorkBuddy导入教程](docs/workbuddy.md) · [准备材料、后续辅导和邮件示例](docs/usage.md)
-
-## 使用Skill，回答具体好在哪里？
-
-**已公开案例显示：Skill组在背景判断、论文理解和准备安排等关键环节，给出了明显更具体、更有帮助的回答。** 这些差异都可以逐句查看匿名全文。
-
-| 关键问题 | 无Skill的实际回答 | 使用AdvisorFit后的改善 |
-|---|---|---|
-| 简历没写某项经验，怎么判断？ | 小红案例把未提供的NLP／知识图谱经历写成“没有” | 明确区分“未提供”与“不会”，背景判断更准确 |
-| 导师论文为什么值得我读？ | 主要列阅读题目，安排申请者自行整理问题、方法和结论 | 逐篇解释研究与个人经历的关系，给出具体入口与作者贡献 |
-| 该怎样开始准备？ | 小红案例安排30天完善18篇报道；P.l案例提出扩展至100—200份政策文件 | 分别收束到先做5篇／复用现有40份，列出时间安排与检查办法 |
-| 我的基础能做什么？ | 已有方向与经历的联系，但部分解释较概括 | 进一步拆解真实操作、可迁移能力、导师问题和当前边界 |
-
-**Skill把高质量导师分析需要的步骤，变成可复用的工作方法。** 用户先用普通话提问，助手按研究、匹配、准备和联系的要求展开。[看看具体方法如何对应这些改善 →](https://github.com/dsSep/advisorfit-skill/blob/main/docs/why-advisorfit.md)
-
-### 看完整对照，亲自体验
-
-在线页面专注**实时体验**：选择固定虚构案例，让DeepSeek加载完整AdvisorFit核心及对应参考文件现场回答。**历史回答对照**保留在下方仓库案例中，网页提供直达链接。实时体验需要ChatGPT登录，当前不联网检索真实导师，也不接收简历上传。
-
-- [小红／N.l：0.2.5完整对照](examples/case-001/README.md)：直接看“没有经验”如何变成准确的未知判断、论文如何连接现有实践、起步任务如何缩小。
-- [P.l：0.2.4完整对照](examples/case-002/README.md)：直接看研究匹配如何解释得更细、准备成本如何明确、结论如何更有判断依据。
-- [0.2.8邮件开发试用](examples/case-003/README.md)：课程实践、已有研究、补齐身份后写信的完整输入与输出。固定虚构材料的Codex子代理检查，与上述网页案例分开；旧版已做好的地方和新版尚有的重复也公开。
-
-- [WorkBuddy真实运行：脱敏简历、邮件与审核](examples/case-004/README.md)：实际加载0.2.8核心及研究／准备／邮件参考，完成候选比较和进组邮件；保留学院归类错误、过强推断与邮件过长等问题。只有Skill组一次运行，不属于有无Skill对照。
-
-案例中的具体优势、完整回答和已知问题一起公开。每条件仅一次，部分模型条件存在差异；这些记录不等同于统计显著性或录取效果证明。[完整测试条件与证据范围](docs/limitations.md)
+</details>
 
 ## 隐私与边界
 
-Skill本身不提供独立数据存储服务；在ChatGPT／Codex／WorkBuddy中使用时，材料处理取决于所用平台及启用的工具。在线体验的输入会发送给DeepSeek，请仅使用虚构或脱敏内容。[隐私说明](docs/privacy.md)
+请勿在公开评论或 Issue 上传真实简历、联系方式或密钥。Skill的数据处理取决于宿主及启用的工具；在线演示仅用固定虚构案例，提问发送给DeepSeek，当前不接受简历上传或实时检索真实导师。[隐私说明](docs/privacy.md)
 
-来源可能过时，模型也可能出错；研究匹配不代表招生或接收意向。邮件由你核对、自行发送。
+[版本变化](CHANGELOG.md) · [反馈](CONTRIBUTING.md) · [安全问题](SECURITY.md) · [MIT许可](LICENSE)
 
-## 项目内容
-
-`skills/advisorfit/` 是完整Skill；`examples/` 保存可复查案例；`website/` 是在线体验源码。ChatGPT／Codex的Skill包不包含网站依赖。
-
-[版本变化](CHANGELOG.md) · [贡献与反馈](CONTRIBUTING.md) · [安全问题](SECURITY.md) · [MIT许可](LICENSE)
-
-[U-A大学数据科学专业导师选择情况与个人推荐](docs/whu-data-science-advisor-selections.md)
+[武汉大学数据科学专业导师选择情况与个人推荐](docs/whu-data-science-advisor-selections.md)

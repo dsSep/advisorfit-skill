@@ -32,3 +32,12 @@ test('download offers the actual versioned artifact and both supported-host inst
   assert.match(html,/installation.md#chatgpt/);assert.match(html,/installation.md#codex/);
   assert.match(html,/自行核对/);
 });
+
+test('installation cards provide platform ZIPs and inline visual steps',()=>{
+  const html=renderToStaticMarkup(React.createElement(DownloadSkill));
+  assert.match(html,/<h3>WorkBuddy<\/h3>/);
+  assert.match(html,/advisorfit-workbuddy-0\.2\.10\.zip/);
+  assert.match(html,/上传技能/);assert.match(html,/上传插件压缩包/);
+  for(const path of ['workbuddy-menu.png','workbuddy-upload.png','codex-menu.png','codex-upload.png']) assert.ok(html.includes('/install/'+path),path);
+  assert.match(html,/不.*解压/);assert.match(html,/<details/);
+});

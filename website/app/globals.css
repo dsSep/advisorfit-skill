@@ -33,3 +33,18 @@
 .workspace-heading .micro-label{grid-column:2;margin-left:0;justify-self:start}
 .comparison-link{font-size:14px;color:var(--secondary);margin:24px 0}
 .comparison-link a{display:inline-flex;align-items:center;min-height:44px;color:var(--purple-dark);text-decoration:underline;text-underline-offset:4px}
+
+/* Installation: platform downloads precede optional visual instructions. */
+.install-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+.install-grid article{min-width:0}
+.install-grid .install-download{display:flex;justify-content:center;background:var(--ink);color:var(--surface);padding:12px 16px;text-decoration:none}
+.install-grid .install-download:hover{background:var(--purple-dark)}
+.install-grid .install-filename{font-size:12px;overflow-wrap:anywhere;margin:8px 0 16px}
+.install-grid ol{padding-left:20px;font-size:14px;line-height:1.9;color:var(--secondary)}
+.install-grid li+li{margin-top:8px}
+.install-guide{border-top:1px solid var(--line);margin-top:16px;padding-top:8px}
+.install-guide summary{cursor:pointer;min-height:44px;display:list-item;align-content:center;color:var(--purple-dark);font-size:14px}
+.install-guide p{font-size:13px}
+.install-grid .install-screenshot{display:block;min-height:0;margin:12px 0}
+.install-screenshot img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+@media(max-width:900px){.install-grid{grid-template-columns:1fr}}

@@ -22,11 +22,20 @@ export function History() {
   </section>;
 }
 
+function InstallScreenshot({file,alt,width,height}:{file:string;alt:string;width:number;height:number}) {
+  return <a className="install-screenshot" href={`/install/${file}`} target="_blank" rel="noopener noreferrer" aria-label={`${alt}，打开大图`}><img src={`/install/${file}`} alt={alt} width={width} height={height} loading="lazy" decoding="async" /></a>;
+}
+
 export function DownloadSkill() {
+  const pluginZip = `${repo}/releases/download/v0.2.10/advisorfit-skill-0.2.10.zip`;
+  const workbuddyZip = `${repo}/releases/download/v0.2.10/advisorfit-workbuddy-0.2.10.zip`;
   return <section className="download-section" id="download" aria-labelledby="download-title">
-    <div className="section-heading"><div><p className="eyebrow">02 / 下载使用</p><h2 id="download-title">把这套方法，带到你的助手里。</h2></div><p>完整Skill包含核心说明、研究、准备和邮件参考。只安装Skill，无需部署网站或配置模型密钥。</p></div>
-    <div className="download-actions"><a className="primary-link" href={`${repo}/releases/download/v0.2.10/advisorfit-skill-0.2.10.zip`}>下载完整Skill · v0.2.10 <span aria-hidden="true">↓</span></a><a href={`${repo}/blob/main/docs/installation.md`} target="_blank" rel="noopener noreferrer">安装与更新指南 ↗</a><a href={`${repo}/releases/tag/v0.2.10`} target="_blank" rel="noopener noreferrer">版本说明与校验值 ↗</a></div>
-    <div className="install-grid"><article><h3>ChatGPT</h3><p>在支持自定义插件的账户中导入完整包，再在新聊天选择AdvisorFit。可用入口依账户而异；上传文件作参考不等于原生安装。</p><a href={`${repo}/blob/main/docs/installation.md#chatgpt`} target="_blank" rel="noopener noreferrer">查看ChatGPT安装步骤 ↗</a></article><article><h3>Codex</h3><p>用Skill Installer安装仓库中的技能目录，或将完整目录复制到项目的 .agents/skills/，开启新会话后调用 $advisorfit。</p><a href={`${repo}/blob/main/docs/installation.md#codex`} target="_blank" rel="noopener noreferrer">查看Codex安装步骤 ↗</a></article></div>
-    <p className="field-help">分析真实导师需要宿主的搜索与文件能力。结果和邮件请自行核对；研究匹配不代表正在招生。</p>
+    <div className="section-heading"><div><p className="eyebrow">02 / 下载使用</p><h2 id="download-title">选好平台，按图安装。</h2></div><p>下载对应ZIP，直接上传，不需要解压。安装Skill即可，无需部署网站或配置另一套模型密钥。</p></div>
+    <div className="install-grid">
+      <article><h3>WorkBuddy</h3><p>下载技能包，上传到「技能」。</p><a className="install-download" href={workbuddyZip}>下载WorkBuddy技能包 ↓</a><p className="install-filename">advisorfit-workbuddy-0.2.10.zip</p><ol><li>打开「专家·技能·连接器」→「技能」。</li><li>「添加技能」→「上传技能」，选择刚下载的ZIP。</li><li>在「已安装」启用AdvisorFit，新建任务并选择它。</li></ol><details className="install-guide"><summary>展开WorkBuddy图示</summary><p>按红框依次操作；点击截图可放大。</p><InstallScreenshot file="workbuddy-menu.png" alt="WorkBuddy：技能页面选择添加技能、上传技能" width={1800} height={1032}/><InstallScreenshot file="workbuddy-upload.png" alt="WorkBuddy：导入技能窗口选择ZIP文件" width={1800} height={1032}/><p>不必勾选「非高风险自动安装」，按客户端提示审阅并确认。</p></details><a href={`${repo}/blob/main/docs/installation.md#workbuddy`} target="_blank" rel="noopener noreferrer">GitHub完整图示 ↗</a></article>
+      <article><h3>Codex</h3><p>下载插件包，使用桌面上传入口。</p><a className="install-download" href={pluginZip}>下载Codex插件包 ↓</a><p className="install-filename">advisorfit-skill-0.2.10.zip</p><ol><li>打开「自定义」→「插件」。</li><li>「添加」→「上传插件压缩包」，选择ZIP并确认添加。</li><li>新建聊天，选择AdvisorFit，或使用 $advisorfit 调用。</li></ol><details className="install-guide"><summary>展开Codex图示</summary><p>上传整个ZIP，不用先解压；点击截图可放大。</p><InstallScreenshot file="codex-menu.png" alt="Codex：插件页添加菜单选择上传插件压缩包" width={1376} height={887}/><InstallScreenshot file="codex-upload.png" alt="Codex：点击上传、选择ZIP并添加插件" width={1376} height={887}/></details><a href={`${repo}/blob/main/docs/installation.md#codex`} target="_blank" rel="noopener noreferrer">完整图示与备用安装方式 ↗</a></article>
+      <article><h3>ChatGPT</h3><p>与Codex共用插件包，安装入口依账户而异。</p><a className="install-download" href={pluginZip}>下载ChatGPT插件包 ↓</a><p className="install-filename">advisorfit-skill-0.2.10.zip</p><ol><li>在支持自定义插件的环境中导入完整ZIP。</li><li>确认安装后，新建聊天并选择AdvisorFit。</li></ol><p>普通附件上传不等于安装Skill；没有插件导入入口时，可使用WorkBuddy或Codex。</p><a href={`${repo}/blob/main/docs/installation.md#chatgpt`} target="_blank" rel="noopener noreferrer">查看ChatGPT安装说明 ↗</a></article>
+    </div>
+    <p className="field-help">安装后提供脱敏背景，再问「这位导师适不适合我，帮我写封申请进组的邮件」。分析真实导师需要宿主的搜索与文件能力；结果和邮件请自行核对。</p>
   </section>;
 }
