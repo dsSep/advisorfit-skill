@@ -30,8 +30,8 @@
   "sha256": {
     "comparisons.json": "28a6f302e8f9d6a6cc2c45d9db0c3d1be5ec736a594c7cf0ecf31cea71ec0953",
     "README.md": "ebe98770466b19fa34ed203efe93485f2253d077ce87b48a1cd687923858ed32",
-    "with-skill.md": "5f9073913ff3fe65fda816c766c82b141a0099897a2d31d51f3a07433edb9437",
-    "with-skill.raw.txt": "a833d90973c5008c6f69f374faa76580bf2d85a87c26e177a1fe8be4a8d85eb1",
+    "with-skill.md": "1b2d501de8c08f635ecb10d02136f6a67f99db7c9959663d55b95d5c42420a03",
+    "with-skill.raw.txt": "31010dae3fd0e3fb339e01a1746c203705610bc56506b76e8bcf36f1f0f46ebd",
     "without-skill.md": "34f0dc7d918b3adfca83fac3960627deb86fa5b449c27c5d480d7719d63ee63f",
     "without-skill.raw.txt": "904d1ce5a7bd44fb8043fdd7158518ad3db1ed921cb61ce8fc5f6c48ac0ad356"
   }
