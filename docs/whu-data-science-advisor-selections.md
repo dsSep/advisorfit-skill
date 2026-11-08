@@ -31,7 +31,6 @@
 | 38 | 数学与统计学院 | 马利敏 | 2 | [查看主页](https://maths.whu.edu.cn/info/4261/133011.htm) |
 | 42 | 武汉数学与智能研究院 | 谭清雄 | 2 | [查看主页](https://imai.whu.edu.cn/info/2101/5961.htm) |
 | 44 | 武汉数学与智能研究院 | 王定杰 | 3 | [查看主页](https://imai.whu.edu.cn/info/2091/5831.htm) |
-| 人工智能学院 | 焦雨领 | 12 | [查看主页](https://jszy.whu.edu.cn/jiaoyuling/zh_CN/index.htm) |
 | 46 | 信息管理学院 | 王平 | 1 | [查看主页](https://sim.whu.edu.cn/info/1571/85472.htm) |
 | 47 | 计算机学院 | 王增茂 | 1 | [查看主页](https://jszy.whu.edu.cn/wangzengmao/zh_CN/index.htm) |
 | 49 | 人工智能学院 | 武宇 | 1 | [查看主页](https://jszy.whu.edu.cn/wuyu7/en/index.htm) |
