@@ -41,3 +41,13 @@ test('installation cards provide platform ZIPs and inline visual steps',()=>{
   for(const path of ['workbuddy-menu.png','workbuddy-upload.png','codex-menu.png','codex-upload.png']) assert.ok(html.includes('/install/'+path),path);
   assert.match(html,/不.*解压/);assert.match(html,/<details/);
 });
+
+test('each platform is a full-width disclosure, initially closed, with no nested image disclosure',()=>{
+  const html=renderToStaticMarkup(React.createElement(DownloadSkill));
+  const platforms=[...html.matchAll(/<details class="install-platform"([^>]*)>/g)];
+  assert.equal(platforms.length,3);
+  for(const item of platforms) assert.doesNotMatch(item[1],/\bopen\b/);
+  assert.equal((html.match(/<details/g)||[]).length,3);
+  assert.match(html,/class="install-stack"/);
+  assert.doesNotMatch(html,/class="install-grid"/);
+});
